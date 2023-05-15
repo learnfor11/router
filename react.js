@@ -1,16 +1,21 @@
 import { createContext, useContext, useState } from 'react'
 import { $, useMount } from '@ppzp/utils.rc'
 
+export
+const RouterConfig = {
+  base_path: ''
+}
+
 const RouterContext = createContext()
 
 export
 function Router({ routes }) {
-  const [route, setRoute] = useState(location.pathname)
+  const [route, setRoute] = useState(location.pathname + location.search)
 
   const [routes_map] = useState(() => { // 初始化 path => route 的映射
     const map = new Map()
     for(const route of routes)
-      map.set(route.path, route)
+      map.set(RouterConfig.base_path + route.path, route)
     return map
   })
 
@@ -38,6 +43,7 @@ function Router({ routes }) {
 
 export
 function Link({ className, to, target, children }) {
+  to = RouterConfig.base_path + to
   const { setRoute } = useContext(RouterContext)
   return $.a(
     {
