@@ -16,7 +16,7 @@ function Router({ routes }) {
 
   useMount(function() { // 监听浏览器前进后退
     window.addEventListener('popstate', function() {
-      // console.debug('[router mini] listen popstate')
+      console.debug('[router mini] listen popstate')
       setRoute(location.pathname)
     })
   })
@@ -46,7 +46,7 @@ function Link({ className, to, target, children }) {
       target,
       onClick(e) {
         e.preventDefault()
-        // console.debug('[router mini] click link')
+        console.debug('[router mini] click link')
         setRoute(to)
       }
     },
