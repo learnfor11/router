@@ -1,7 +1,7 @@
 {
   "name": "router-mini",
-  "version": "0.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "common mini router for web app",
   "main": "index.js",
   "files": [
     "index.js",
@@ -14,10 +14,18 @@
   "devDependencies": {
     "http-server": "^14.1.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/learnfor11/react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/learnfor11/react/issues"
+  },
+  "homepage": "https://github.com/learnfor11/react#readme",
   "peerDependencies": {
     "react": ">=18.2.0"
   },
   "dependencies": {
-    "@ppzp/utils.rc": "^0.0.10"
+    "@ppzp/utils.rc": ">=0.0.10"
   }
 }
