@@ -12,10 +12,10 @@ import { Router, Link, useRoute } from 'router-mini/react.js'
 export default function App() {
   return <Router
     routes = {[
-      { path: '/', element: $(Home) },
-      { path: '/a', element: $(PageA) },
-      { path: '/b', element: $(PageB) },
-      { path: '/c', element: $(PageC) },
+      { path: '/', element: <Home /> },
+      { path: '/a', element: <PageA /> },
+      { path: '/b', element: <PageB /> },
+      { path: '/c', element: <PageC /> }
     ]}
   />
 }
@@ -36,7 +36,7 @@ function PageB() {
 }
 function PageC() {
   const route = useRoute()
-  console.log({ route })
+  console.log({ route }) // "/c"
   return <div>page c</div>
 }
 ```
