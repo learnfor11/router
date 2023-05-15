@@ -1,0 +1,23 @@
+{
+  "name": "router-mini",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "react.js"
+  ],
+  "scripts": {},
+  "keywords": [],
+  "author": "肥肥狗蛋的粑粑妈妈和她大爷",
+  "license": "Unlicense",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "peerDependencies": {
+    "react": ">=18.2.0"
+  },
+  "dependencies": {
+    "@ppzp/utils.rc": "^0.0.10"
+  }
+}
