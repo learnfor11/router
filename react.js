@@ -12,7 +12,7 @@ export
 function Router({ routes }) {
   const [route, setRoute] = useState(location.pathname + location.search)
 
-  const [routes_map] = useState(() => { // 初始化 path => route 的映射
+  const [routes_map] = useState(function make_routes_map() { // useState 比 useMemo 语义更强（无依赖，只计算一次）
     const map = new Map()
     for(const route of routes)
       map.set(RouterConfig.base_path + route.path, route)
