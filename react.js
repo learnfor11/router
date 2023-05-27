@@ -29,8 +29,8 @@ function Router({ routes }) {
   return $(RouterContext.Provider,
     {
       value: {
-        route,
-        setRoute(route) {
+        value: route,
+        set(route) {
           history.pushState({}, '', route) // 更新浏览器地址栏
           setRoute(route) // 更新 Context
         }
@@ -44,7 +44,7 @@ function Router({ routes }) {
 export
 function Link({ className, to, target, children }) {
   to = RouterConfig.base_path + to
-  const { setRoute } = useContext(RouterContext)
+  const $route = useContext(RouterContext)
   return $.a(
     {
       className,
@@ -53,7 +53,7 @@ function Link({ className, to, target, children }) {
       onClick(e) {
         e.preventDefault()
         // console.debug('[router mini] click link')
-        setRoute(to)
+        $route.set(to)
       }
     },
     children
@@ -62,7 +62,7 @@ function Link({ className, to, target, children }) {
 
 export
 function useRoute() {
-  return useContext(RouterContext).route
+  return useContext(RouterContext)
 }
 
 export

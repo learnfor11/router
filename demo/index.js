@@ -30,7 +30,7 @@ function PageB() {
   return $.div('page b')
 }
 function PageC() {
-  const route = useRoute()
+  const route = useRoute().value
   console.log({ route })
   return $.div('page c')
 }

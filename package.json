@@ -1,6 +1,6 @@
 {
   "name": "router-mini",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "common mini router for web app",
   "main": "index.js",
   "files": [
@@ -11,9 +11,6 @@
   "keywords": [],
   "author": "肥肥狗蛋的粑粑妈妈和她大爷",
   "license": "Unlicense",
-  "devDependencies": {
-    "http-server": "^14.1.1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/learnfor11/react.git"

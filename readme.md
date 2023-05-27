@@ -35,7 +35,7 @@ function PageB() {
   return <div>page b</div>
 }
 function PageC() {
-  const route = useRoute()
+  const route = useRoute().value
   console.log({ route }) // "/c"
   return <div>page c</div>
 }
