@@ -67,7 +67,7 @@ function useRoute() {
 
 export
 function useQuery() {
-  const route = useRoute()
+  const route = useRoute().value
   const qs = route.split('?')[1]
   if(qs === undefined)
     return null
