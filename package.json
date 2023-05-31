@@ -13,12 +13,12 @@
   "license": "Unlicense",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/learnfor11/react.git"
+    "url": "git@github.com:learnfor11/router.js.git"
   },
   "bugs": {
-    "url": "https://github.com/learnfor11/react/issues"
+    "url": "https://github.com/learnfor11/router.js/issues"
   },
-  "homepage": "https://github.com/learnfor11/react#readme",
+  "homepage": "https://github.com/learnfor11/router.js",
   "peerDependencies": {
     "react": ">=18.2.0"
   },
